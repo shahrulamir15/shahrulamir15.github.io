@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/37ea671563.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" type="text/css" href="stylenotepad.css">
+
+    
+
+
+    <title>Notepad Project </title>
+</head>
+
+
+
+
+<body>
+
+    <div class="head1">
+        <div class="quote-div" >
+            <h5> <em>"You just need to keep trying and do your best"</em></h5>
+        </div>
+        <div class="date-div">
+            <h5 id="dateID"> </h5>  
+            <h5 id="timeID">15:20</h5>
+        </div>
+        <script>
+            const d = new Date();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+            document.getElementById("dateID").innerHTML=" " + months[d.getMonth()] + " " +  d.getDate() + " ";
+            
+            var myVar = setInterval(myTimer, 1000);  //using setInterval method per 1000 milisecond
+            function myTimer() {
+                var d = new Date();
+                var t = d.toLocaleTimeString(); 
+                document.getElementById("timeID").innerHTML = t;
+            }
+        </script>
+    </div>
+
+    <div class="title-div"> 
+        <h2> My Notes </h2>
+    </div>
+    
+
+    <div class="notes-popup">
+        <div class="notes-form">
+            <div class="loader"></div>
+                
+                <input type="text" id="title" placeholder="My Title"  autocomplete="off" required > <button class="closing" onclick="close1(this)">  <i style="color: #ffffff;" class="far fa-times-circle fa-2x"></i> </button>
+                <!--div class="title-form"></div-->           
+                <textarea class="txt-area" id="content" autocomplete="off" required></textarea>
+                <!--div class="notes"></div-->
+
+            <button type="submit" onclick="storeNotes()" class="btn-form">SAVE</button>
+            
+        </div>
+    </div>
+
+    <div id="tempat-note" class="note-container" >
+        <!--div class="notes"> 
+            <div class="notes-menu"> 
+                <i class="fas fa-times-circle fa-1x"></i>
+            </div>
+            <h2 id="note-title">My First Notes</h2>
+            <p id="note-content">My First Content</p>
+        </div-->
+    </div>
+
+    <div class="ini">
+    </div>
+
+
+    <div class="add-btn">   
+        <button class="btn" onclick="composeNotes(this)" > <i class="fa fa-pencil fa-2x" ></i></button>
+    </div>
+
+        
+</body>
+<script src="script.js"></script>
+</html>
