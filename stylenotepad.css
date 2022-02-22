@@ -14,7 +14,7 @@
 
     body{
             font-family: 'Courier New', Courier, monospace;
-            background-image: url(/bg.jpg);
+            background-image: url(bg.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -273,7 +273,7 @@
         }
 
         .notes-form textarea {
-            background: url(/notepad-psd2.png);
+            background: url(notepad-psd2.png);
             background-size: cover;
             min-width: 100%;
             flex: 2;
